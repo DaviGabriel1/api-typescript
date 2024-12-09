@@ -18,11 +18,17 @@
   },
   "homepage": "https://github.com/DaviGabriel1/api-typescript#readme",
   "devDependencies": {
+    "@eslint/js": "^9.16.0",
+    "eslint": "^9.16.0",
+    "globals": "^15.13.0",
     "ntypescript": "^1.201706190042.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0"
   },
   "dependencies": {
-    "nodemon": "^3.1.7"
+    "eslint-config-prettier": "^9.1.0",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.4.2"
   }
 }
