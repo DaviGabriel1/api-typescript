@@ -1,3 +1,5 @@
+import validator from "validator";
+
 import { User } from "../../models/user";
 import { HttpRequest, HttpResponse } from "../protocols";
 import { CreateUserParams, ICreateUserController, IcreateUserRepository } from "./protocols";
@@ -15,6 +17,15 @@ export class CreateUserController implements ICreateUserController{
                         body: `field ${field} is required`
                     };
                 }
+            }
+
+            const emailIsValid = validator.isEmail(httpRequest.body!.email);
+
+            if(!emailIsValid){
+                return {
+                    statusCode:400,
+                    body: "E-mail is invalid"
+                };
             }
 
 
