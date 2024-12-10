@@ -3,7 +3,7 @@ import { config } from "dotenv";
 
 config();
 
-const TOKEN_KEY = process.env.TOKEN || "your-secret-key";
+const TOKEN_KEY = process.env.TOKEN;
 
 export const authenticateToken = (req: Request, res: Response, next: NextFunction): void => {
   const authHeader = req.headers["authorization"];
